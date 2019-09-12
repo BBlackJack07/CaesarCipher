@@ -8,7 +8,7 @@ def crypt(shift,msg):
         index=ALPHABET.find(msg_encrypt[i])
         if index != -1:
             msg_encrypt[i]=ALPHABET[(index+shift)%LEN_ALPHA]
-        msg_encrypt=[msg_encrypt[i].lower() if msg[i]==msg[i].lower() else msg_encrypt[i] for i in range(0, len(msg))]
+    msg_encrypt=[msg_encrypt[i].lower() if msg[i]==msg[i].lower() else msg_encrypt[i] for i in range(0, len(msg))]
     return ''.join(msg_encrypt)
 
 def decrypt(shift,msg_encrypt):
